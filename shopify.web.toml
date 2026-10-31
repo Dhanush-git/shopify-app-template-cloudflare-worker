@@ -1,0 +1,6 @@
+name = "shopify-app"
+roles = ["frontend", "backend"]
+port = 3000
+
+[commands]
+dev = "npm run dev"

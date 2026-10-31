@@ -1,0 +1,47 @@
+{
+  "name": "shopify-app-react-router-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "graphql-codegen": "graphql-codegen",
+    "typecheck": "wrangler types && react-router typegen && tsc && tsc -p tsconfig.node.json",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && vite preview",
+    "cf-typegen": "wrangler types",
+    "postinstall": "wrangler types",
+    "env": "shopify app env",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "explorer": "open http://localhost:3000/cdn-cgi/local/explorer"
+  },
+  "dependencies": {
+    "@react-router/fs-routes": "^7.18.5",
+    "@shopify/api-codegen-preset": "^3.0.0",
+    "@shopify/app-bridge-react": "^4.2.14",
+    "@shopify/shopify-api": "^15.0.1",
+    "@shopify/shopify-app-react-router": "^4.0.0",
+    "@shopify/shopify-app-session-storage-drizzle": "^6.0.1",
+    "drizzle-orm": "^0.45.4",
+    "isbot": "^5.1.36",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router": "^7.18.5"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.66.0",
+    "@react-router/dev": "^7.18.5",
+    "@shopify/app-bridge-types": "^0.7.3",
+    "@shopify/cli": "^5.0.0",
+    "@shopify/polaris-types": "^2.0.0",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "drizzle-kit": "^0.31.11",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.3",
+    "wrangler": "^4.156.0"
+  }
+}
