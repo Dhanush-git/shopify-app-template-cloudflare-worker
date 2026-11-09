@@ -13,8 +13,7 @@
     "postinstall": "wrangler types",
     "env": "shopify app env",
     "db:generate": "drizzle-kit generate",
-    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
-    "db:migrate:local": "wrangler d1 migrations apply DB --local",
+    "db:migrate": "wrangler d1 migrations apply DB",
     "explorer": "open http://localhost:3000/cdn-cgi/local/explorer"
   },
   "dependencies": {

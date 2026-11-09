@@ -1,6 +1,8 @@
 name = "React Router"
 roles = ["frontend", "backend"]
+# PORT has been specified here so that we can use cloudflare local explorer
 port = 3000
 
 [commands]
+predev = "npm run db:migrate"
 dev = "npm run dev"
