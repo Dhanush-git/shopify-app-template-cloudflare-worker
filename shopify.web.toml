@@ -1,5 +1,6 @@
 name = "React Router"
 roles = ["frontend", "backend"]
+webhooks_path = "/webhooks/app/uninstalled"
 # PORT has been specified here so that we can use cloudflare local explorer
 port = 3000
 
